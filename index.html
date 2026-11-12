@@ -84,3 +84,109 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krisbell | Tienda virtual de maquillaje y accesorios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-rose-50 text-slate-800 font-sans">
+
+    <!-- Header / Navegación -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="bg-rose-600 text-white font-bold px-3 py-1 rounded-full text-lg">K</span>
+                <h1 class="text-2xl font-bold text-rose-600 tracking-wide">Krisbell</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="#productos" class="hover:text-rose-600 transition">Productos</a>
+                <a href="#asistente-ia" class="hover:text-rose-600 transition">Asesora IA</a>
+                <a href="#contacto" class="hover:text-rose-600 transition">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="bg-gradient-to-r from-rose-100 to-pink-200 py-16 text-center px-4">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl font-extrabold text-slate-900 mb-4">Brilla con estilo propio</h2>
+            <p class="text-lg text-slate-700 mb-8">Encuentra el maquillaje y los accesorios ideales para realzar tu belleza todos los días.</p>
+            <a href="#productos" class="bg-rose-600 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-rose-700 transition">Ver Catálogo</a>
+        </div>
+    </section>
+
+    <!-- Catálogo de Productos -->
+    <main id="productos" class="max-w-7xl mx-auto px-4 py-12">
+        <h3 class="text-2xl font-bold text-slate-900 mb-8 text-center">Nuestros Productos Destacados</h3>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Producto 1 -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-rose-100 hover:shadow-md transition">
+                <div class="h-48 rounded-xl bg-rose-50 mb-4 flex items-center justify-center text-4xl">💄</div>
+                <span class="text-xs font-semibold text-rose-600 uppercase tracking-wider">Rostro</span>
+                <h4 class="font-serif text-xl font-bold text-slate-900 mt-1">Labial Matte Terciopelo</h4>
+                <p class="text-slate-600 text-sm mt-2">Larga duración, alta pigmentación y acabado hidratante que no reseca tus labios.</p>
+                <div class="mt-4 flex items-center justify-between">
+                    <span class="text-lg font-bold text-slate-900">$38.000 COP</span>
+                    <button onclick="alert('¡Producto agregado al carrito con éxito!')" class="px-4 py-2 bg-rose-600 text-white text-sm font-semibold rounded-lg hover:bg-rose-700 transition">Comprar</button>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-rose-100 hover:shadow-md transition">
+                <div class="h-48 rounded-xl bg-rose-50 mb-4 flex items-center justify-center text-4xl">✨</div>
+                <span class="text-xs font-semibold text-rose-600 uppercase tracking-wider">Rostro</span>
+                <h4 class="font-serif text-xl font-bold text-slate-900 mt-1">Iluminador Glow Liquid</h4>
+                <p class="text-slate-600 text-sm mt-2">Aporta un brillo radiante y natural a tu piel con textura ligera de rápida absorción.</p>
+                <div class="mt-4 flex items-center justify-between">
+                    <span class="text-lg font-bold text-slate-900">$45.000 COP</span>
+                    <button onclick="alert('¡Producto agregado al carrito con éxito!')" class="px-4 py-2 bg-rose-600 text-white text-sm font-semibold rounded-lg hover:bg-rose-700 transition">Comprar</button>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-rose-100 hover:shadow-md transition">
+                <div class="h-48 rounded-xl bg-rose-50 mb-4 flex items-center justify-center text-4xl">💎</div>
+                <span class="text-xs font-semibold text-rose-600 uppercase tracking-wider">Accesorios</span>
+                <h4 class="font-serif text-xl font-bold text-slate-900 mt-1">Set de Brochas Gold Pro</h4>
+                <p class="text-slate-600 text-sm mt-2">10 brochas con cerdas ultrasuaves de alta calidad para un difuminado perfecto.</p>
+                <div class="mt-4 flex items-center justify-between">
+                    <span class="text-lg font-bold text-slate-900">$65.000 COP</span>
+                    <button onclick="alert('¡Producto agregado al carrito con éxito!')" class="px-4 py-2 bg-rose-600 text-white text-sm font-semibold rounded-lg hover:bg-rose-700 transition">Comprar</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Sección de Asesoría con IA -->
+    <section id="asistente-ia" class="max-w-4xl mx-auto px-4 py-12">
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-rose-100">
+            <div class="text-center mb-6">
+                <span class="bg-rose-100 text-rose-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Inteligencia Artificial</span>
+                <h3 class="text-2xl font-bold text-slate-900 mt-2">Asesora Virtual Krisbell 🤖</h3>
+                <p class="text-slate-600 text-sm mt-1">Pregúntale qué producto se adapta mejor a tu estilo o tono de piel.</p>
+            </div>
+            <div class="space-y-4">
+                <div class="bg-rose-50 p-4 rounded-xl text-sm text-slate-700">
+                    <p><strong>Asesora Krisbell:</strong> ¡Hola! 💖 ¿Buscas un labial de larga duración o necesitas recomendaciones para un look radiante?</p>
+                </div>
+                <div class="flex gap-2">
+                    <input type="text" placeholder="Escribe aquí tu pregunta o qué producto buscas..." class="flex-1 border border-rose-200 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-rose-600">
+                    <button onclick="alert('¡Nuestra asesora virtual te recomienda probar el Iluminador Glow Liquid para un acabado brillante y natural!')" class="bg-rose-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-rose-700 transition">Preguntar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contacto -->
+    <footer id="contacto" class="bg-white border-t border-rose-100 mt-16 py-8 text-center text-slate-600 text-sm">
+        <p>&copy; 2026 Krisbell. Todos los derechos reservados. Creado con dedicación para Jóvenes CreaTIvos.</p>
+    </footer>
+
+</body>
+</html>
