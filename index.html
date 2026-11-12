@@ -1,192 +1,235 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krisbell | Tienda virtual de maquillaje y accesorios</title>
+    <title>Krisbell | Tienda de Maquillaje y Accesorios</title>
+    <!-- Tailwind CSS para diseño moderno y responsive -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Librería de Animaciones AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body class="bg-rose-50 text-slate-800 font-sans">
+<body class="bg-rose-50 text-slate-800 font-sans antialiased">
 
-    <!-- Header / Navegación -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <!-- HEADER / NAVEGACIÓN -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <span class="bg-rose-600 text-white font-bold px-3 py-1 rounded-full text-lg">K</span>
-                <h1 class="text-2xl font-bold text-rose-600 tracking-wide">Krisbell</h1>
+                <span class="bg-rose-600 text-white font-bold px-3 py-1 rounded-full text-lg shadow-md">K</span>
+                <h1 class="text-2xl font-extrabold text-rose-600 tracking-wide">Krisbell</h1>
             </div>
-            <nav class="hidden md:flex space-x-6 text-sm font-medium">
-                <a href="#productos" class="hover:text-rose-600 transition">Productos</a>
-                <a href="#acerca" class="hover:text-rose-600 transition">Nosotros</a>
+            <nav class="hidden md:flex space-x-6 text-sm font-semibold text-slate-600">
+                <a href="#inicio" class="hover:text-rose-600 transition">Inicio</a>
+                <a href="#productos" class="hover:text-rose-600 transition">Catálogo</a>
+                <a href="#asistente-ia" class="hover:text-rose-600 transition flex items-center gap-1 text-rose-600">🤖 Asesora IA</a>
                 <a href="#contacto" class="hover:text-rose-600 transition">Contacto</a>
+                <a href="#admin" class="bg-slate-900 text-white px-3 py-1.5 rounded-lg hover:bg-slate-800 transition">Admin</a>
             </nav>
         </div>
     </header>
 
-    <!-- Banner Principal -->
-    <section class="bg-gradient-to-r from-rose-100 to-pink-200 py-16 text-center px-4">
+    <!-- BANNER PRINCIPAL (HOME) -->
+    <section id="inicio" class="bg-gradient-to-r from-rose-100 via-pink-100 to-rose-200 py-20 text-center px-4" data-aos="fade-in">
         <div class="max-w-3xl mx-auto">
-            <h2 class="text-4xl font-extrabold text-slate-900 mb-4">Brilla con estilo propio</h2>
-            <p class="text-lg text-slate-700 mb-8">Encuentra el maquillaje y los accesorios ideales para realzar tu belleza todos los días.</p>
-            <a href="#productos" class="bg-rose-600 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-rose-700 transition">Ver Catálogo</a>
+            <span class="bg-white text-rose-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-sm">✨ Nueva Colección 2026</span>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mt-4 mb-4">Brilla con estilo propio en Krisbell</h2>
+            <p class="text-lg text-slate-700 mb-8">Encuentra el maquillaje y los accesorios ideales para realzar tu belleza todos los días con fórmulas de alta calidad.</p>
+            <a href="#productos" class="inline-block bg-rose-600 text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-rose-700 transition transform hover:-translate-y-1">Ver Catálogo</a>
         </div>
     </section>
 
-    <!-- Catálogo de Productos -->
-    <main id="productos" class="max-w-7xl mx-auto px-4 py-12">
-        <h3 class="text-2xl font-bold text-slate-900 mb-8 text-center">Nuestros Productos Destacados</h3>
+    <!-- CATÁLOGO DE PRODUCTOS -->
+    <main id="productos" class="max-w-7xl mx-auto px-4 py-16">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h3 class="text-3xl font-extrabold text-slate-900">Nuestros Productos Destacados</h3>
+            <p class="text-slate-600 mt-2">Seleccionados especialmente para ti</p>
+        </div>
         
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <!-- Producto 1 -->
-            <div class="bg-white rounded-2xl p-6 shadow-sm border border-rose-100 hover:shadow-md transition">
-                <div class="h-48 rounded-xl bg-rose-50 mb-4 flex items-center justify-center text-4xl">💄</div>
-                <span class="text-xs font-semibold text-rose-600 uppercase tracking-wider">Rostro</span>
-                <h4 class="font-serif text-xl font-bold text-slate-900 mt-1">Labial Matte Terciopelo</h4>
-                <p class="text-slate-600 text-sm mt-2">Larga duración, alta pigmentación y acabado hidratante que no reseca tus labios.</p>
-                <div class="mt-4 flex items-center justify-between">
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-rose-100 hover:shadow-xl transition duration-300 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                <div>
+                    <div class="h-48 rounded-xl bg-rose-50 mb-4 flex items-center justify-center text-5xl shadow-inner">💄</div>
+                    <span class="text-xs font-semibold text-rose-600 uppercase tracking-wider">Rostro</span>
+                    <h4 class="font-serif text-xl font-bold text-slate-900 mt-1">Labial Matte Terciopelo</h4>
+                    <p class="text-slate-600 text-sm mt-2">Larga duración, alta pigmentación y acabado hidratante que no reseca tus labios.</p>
+                </div>
+                <div class="mt-6 flex items-center justify-between pt-4 border-t border-slate-100">
                     <span class="text-lg font-bold text-slate-900">$38.000 COP</span>
-                    <button onclick="alert('¡Producto agregado al carrito con éxito!')" class="px-4 py-2 bg-rose-600 text-white text-sm font-semibold rounded-lg hover:bg-rose-700 transition">Comprar</button>
+                    <button onclick="alert('¡Labial Matte agregado al carrito con éxito! 🛍️')" class="px-4 py-2 bg-rose-600 text-white text-sm font-semibold rounded-lg hover:bg-rose-700 transition shadow-md">Comprar</button>
                 </div>
             </div>
 
             <!-- Producto 2 -->
-            <div class="bg-white rounded-2xl p-6 shadow-sm border border-rose-100 hover:shadow-md transition">
-                <div class="h-48 rounded-xl bg-rose-50 mb-4 flex items-center justify-center text-4xl">✨</div>
-                <span class="text-xs font-semibold text-rose-600 uppercase tracking-wider">Rostro</span>
-                <h4 class="font-serif text-xl font-bold text-slate-900 mt-1">Iluminador Glow Liquid</h4>
-                <p class="text-slate-600 text-sm mt-2">Aporta un brillo radiante y natural a tu piel con textura ligera de rápida absorción.</p>
-                <div class="mt-4 flex items-center justify-between">
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-rose-100 hover:shadow-xl transition duration-300 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                <div>
+                    <div class="h-48 rounded-xl bg-rose-50 mb-4 flex items-center justify-center text-5xl shadow-inner">✨</div>
+                    <span class="text-xs font-semibold text-rose-600 uppercase tracking-wider">Rostro</span>
+                    <h4 class="font-serif text-xl font-bold text-slate-900 mt-1">Iluminador Glow Liquid</h4>
+                    <p class="text-slate-600 text-sm mt-2">Aporta un brillo radiante y natural a tu piel con textura ligera de rápida absorción.</p>
+                </div>
+                <div class="mt-6 flex items-center justify-between pt-4 border-t border-slate-100">
                     <span class="text-lg font-bold text-slate-900">$45.000 COP</span>
-                    <button onclick="alert('¡Producto agregado al carrito con éxito!')" class="px-4 py-2 bg-rose-600 text-white text-sm font-semibold rounded-lg hover:bg-rose-700 transition">Comprar</button>
+                    <button onclick="alert('¡Iluminador Glow Liquid agregado al carrito con éxito! ✨')" class="px-4 py-2 bg-rose-600 text-white text-sm font-semibold rounded-lg hover:bg-rose-700 transition shadow-md">Comprar</button>
                 </div>
             </div>
 
             <!-- Producto 3 -->
-            <div class="bg-white rounded-2xl p-6 shadow-sm border border-rose-100 hover:shadow-md transition">
-                <div class="h-48 rounded-xl bg-rose-50 mb-4 flex items-center justify-center text-4xl">💎</div>
-                <span class="text-xs font-semibold text-rose-600 uppercase tracking-wider">Accesorios</span>
-                <h4 class="font-serif text-xl font-bold text-slate-900 mt-1">Set de Brochas Gold Pro</h4>
-                <p class="text-slate-600 text-sm mt-2">10 brochas con cerdas ultrasuaves de alta calidad para un difuminado perfecto.</p>
-                <div class="mt-4 flex items-center justify-between">
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-rose-100 hover:shadow-xl transition duration-300 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+                <div>
+                    <div class="h-48 rounded-xl bg-rose-50 mb-4 flex items-center justify-center text-5xl shadow-inner">💎</div>
+                    <span class="text-xs font-semibold text-rose-600 uppercase tracking-wider">Accesorios</span>
+                    <h4 class="font-serif text-xl font-bold text-slate-900 mt-1">Set de Brochas Gold Pro</h4>
+                    <p class="text-slate-600 text-sm mt-2">10 brochas con cerdas ultrasuaves de alta calidad para un difuminado perfecto.</p>
+                </div>
+                <div class="mt-6 flex items-center justify-between pt-4 border-t border-slate-100">
                     <span class="text-lg font-bold text-slate-900">$65.000 COP</span>
-                    <button onclick="alert('¡Producto agregado al carrito con éxito!')" class="px-4 py-2 bg-rose-600 text-white text-sm font-semibold rounded-lg hover:bg-rose-700 transition">Comprar</button>
+                    <button onclick="alert('¡Set de Brochas Gold Pro agregado al carrito con éxito! 💎')" class="px-4 py-2 bg-rose-600 text-white text-sm font-semibold rounded-lg hover:bg-rose-700 transition shadow-md">Comprar</button>
                 </div>
             </div>
 
         </div>
     </main>
 
-    <!-- Footer / Contacto -->
-    <footer id="contacto" class="bg-white border-t border-rose-100 mt-16 py-8 text-center text-slate-600 text-sm">
-        <p>&copy; 2026 Krisbell. Todos los derechos reservados. Creado con dedicación para Jóvenes CreaTIvos.</p>
-    </footer>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krisbell | Tienda virtual de maquillaje y accesorios</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-rose-50 text-slate-800 font-sans">
-
-    <!-- Header / Navegación -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <span class="bg-rose-600 text-white font-bold px-3 py-1 rounded-full text-lg">K</span>
-                <h1 class="text-2xl font-bold text-rose-600 tracking-wide">Krisbell</h1>
-            </div>
-            <nav class="hidden md:flex space-x-6 text-sm font-medium">
-                <a href="#productos" class="hover:text-rose-600 transition">Productos</a>
-                <a href="#asistente-ia" class="hover:text-rose-600 transition">Asesora IA</a>
-                <a href="#contacto" class="hover:text-rose-600 transition">Contacto</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Banner Principal -->
-    <section class="bg-gradient-to-r from-rose-100 to-pink-200 py-16 text-center px-4">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-4xl font-extrabold text-slate-900 mb-4">Brilla con estilo propio</h2>
-            <p class="text-lg text-slate-700 mb-8">Encuentra el maquillaje y los accesorios ideales para realzar tu belleza todos los días.</p>
-            <a href="#productos" class="bg-rose-600 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-rose-700 transition">Ver Catálogo</a>
-        </div>
-    </section>
-
-    <!-- Catálogo de Productos -->
-    <main id="productos" class="max-w-7xl mx-auto px-4 py-12">
-        <h3 class="text-2xl font-bold text-slate-900 mb-8 text-center">Nuestros Productos Destacados</h3>
-        
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <!-- Producto 1 -->
-            <div class="bg-white rounded-2xl p-6 shadow-sm border border-rose-100 hover:shadow-md transition">
-                <div class="h-48 rounded-xl bg-rose-50 mb-4 flex items-center justify-center text-4xl">💄</div>
-                <span class="text-xs font-semibold text-rose-600 uppercase tracking-wider">Rostro</span>
-                <h4 class="font-serif text-xl font-bold text-slate-900 mt-1">Labial Matte Terciopelo</h4>
-                <p class="text-slate-600 text-sm mt-2">Larga duración, alta pigmentación y acabado hidratante que no reseca tus labios.</p>
-                <div class="mt-4 flex items-center justify-between">
-                    <span class="text-lg font-bold text-slate-900">$38.000 COP</span>
-                    <button onclick="alert('¡Producto agregado al carrito con éxito!')" class="px-4 py-2 bg-rose-600 text-white text-sm font-semibold rounded-lg hover:bg-rose-700 transition">Comprar</button>
-                </div>
-            </div>
-
-            <!-- Producto 2 -->
-            <div class="bg-white rounded-2xl p-6 shadow-sm border border-rose-100 hover:shadow-md transition">
-                <div class="h-48 rounded-xl bg-rose-50 mb-4 flex items-center justify-center text-4xl">✨</div>
-                <span class="text-xs font-semibold text-rose-600 uppercase tracking-wider">Rostro</span>
-                <h4 class="font-serif text-xl font-bold text-slate-900 mt-1">Iluminador Glow Liquid</h4>
-                <p class="text-slate-600 text-sm mt-2">Aporta un brillo radiante y natural a tu piel con textura ligera de rápida absorción.</p>
-                <div class="mt-4 flex items-center justify-between">
-                    <span class="text-lg font-bold text-slate-900">$45.000 COP</span>
-                    <button onclick="alert('¡Producto agregado al carrito con éxito!')" class="px-4 py-2 bg-rose-600 text-white text-sm font-semibold rounded-lg hover:bg-rose-700 transition">Comprar</button>
-                </div>
-            </div>
-
-            <!-- Producto 3 -->
-            <div class="bg-white rounded-2xl p-6 shadow-sm border border-rose-100 hover:shadow-md transition">
-                <div class="h-48 rounded-xl bg-rose-50 mb-4 flex items-center justify-center text-4xl">💎</div>
-                <span class="text-xs font-semibold text-rose-600 uppercase tracking-wider">Accesorios</span>
-                <h4 class="font-serif text-xl font-bold text-slate-900 mt-1">Set de Brochas Gold Pro</h4>
-                <p class="text-slate-600 text-sm mt-2">10 brochas con cerdas ultrasuaves de alta calidad para un difuminado perfecto.</p>
-                <div class="mt-4 flex items-center justify-between">
-                    <span class="text-lg font-bold text-slate-900">$65.000 COP</span>
-                    <button onclick="alert('¡Producto agregado al carrito con éxito!')" class="px-4 py-2 bg-rose-600 text-white text-sm font-semibold rounded-lg hover:bg-rose-700 transition">Comprar</button>
-                </div>
-            </div>
-
-        </div>
-    </main>
-
-    <!-- Sección de Asesoría con IA -->
-    <section id="asistente-ia" class="max-w-4xl mx-auto px-4 py-12">
-        <div class="bg-white rounded-2xl p-8 shadow-sm border border-rose-100">
+    <!-- INTELIGENCIA ARTIFICIAL: ASESORA VIRTUAL -->
+    <section id="asistente-ia" class="max-w-4xl mx-auto px-4 py-12" data-aos="fade-up">
+        <div class="bg-white rounded-3xl p-8 shadow-md border border-rose-100">
             <div class="text-center mb-6">
                 <span class="bg-rose-100 text-rose-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Inteligencia Artificial</span>
                 <h3 class="text-2xl font-bold text-slate-900 mt-2">Asesora Virtual Krisbell 🤖</h3>
-                <p class="text-slate-600 text-sm mt-1">Pregúntale qué producto se adapta mejor a tu estilo o tono de piel.</p>
+                <p class="text-slate-600 text-sm mt-1">Pregúntale a nuestra IA qué producto se adapta mejor a tu estilo, tono de piel o necesidades.</p>
             </div>
+            
             <div class="space-y-4">
-                <div class="bg-rose-50 p-4 rounded-xl text-sm text-slate-700">
-                    <p><strong>Asesora Krisbell:</strong> ¡Hola! 💖 ¿Buscas un labial de larga duración o necesitas recomendaciones para un look radiante?</p>
+                <div class="bg-rose-50 p-4 rounded-2xl text-sm text-slate-700 border border-rose-100 flex items-start gap-3">
+                    <span class="text-2xl">👩‍💻</span>
+                    <div>
+                        <strong class="text-rose-700 block font-semibold">Asesora Krisbell:</strong>
+                        ¡Hola! 💖 Estoy aquí para ayudarte a elegir tu maquillaje ideal. ¿Buscas un labial de larga duración, un iluminador brillante o asesoría con accesorios?
+                    </div>
                 </div>
-                <div class="flex gap-2">
-                    <input type="text" placeholder="Escribe aquí tu pregunta o qué producto buscas..." class="flex-1 border border-rose-200 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-rose-600">
-                    <button onclick="alert('¡Nuestra asesora virtual te recomienda probar el Iluminador Glow Liquid para un acabado brillante y natural!')" class="bg-rose-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-rose-700 transition">Preguntar</button>
+
+                <!-- Caja de Chat Interactiva con IA -->
+                <div id="chat-historial" class="space-y-2 max-h-48 overflow-y-auto px-2"></div>
+
+                <div class="flex gap-2 pt-2">
+                    <input type="text" id="input-pregunta" placeholder="Ej: ¿Qué me recomiendas para un look natural?" class="flex-1 border border-rose-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-rose-600 bg-slate-50">
+                    <button onclick="enviarPreguntaIA()" class="bg-rose-600 text-white px-6 py-3 rounded-xl text-sm font-semibold hover:bg-rose-700 transition shadow-md">Preguntar</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer / Contacto -->
-    <footer id="contacto" class="bg-white border-t border-rose-100 mt-16 py-8 text-center text-slate-600 text-sm">
+    <!-- FORMULARIO DE CONTACTO REAL -->
+    <section id="contacto" class="max-w-3xl mx-auto px-4 py-16" data-aos="fade-up">
+        <div class="bg-white rounded-3xl p-8 shadow-md border border-rose-100">
+            <div class="text-center mb-8">
+                <h3 class="text-2xl font-bold text-slate-900">Contáctanos</h3>
+                <p class="text-slate-600 text-sm mt-1">¿Tienes dudas sobre tu pedido? Escríbenos directamente.</p>
+            </div>
+            <form onsubmit="event.preventDefault(); alert('¡Mensaje enviado con éxito! Nos pondremos en contacto contigo muy pronto.'); this.reset();" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Tu Nombre</label>
+                    <input type="text" required placeholder="Ej: Sofía Gutiérrez" class="w-full border border-rose-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-rose-600 bg-slate-50">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Correo Electrónico</label>
+                    <input type="email" required placeholder="tucorreo@email.com" class="w-full border border-rose-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-rose-600 bg-slate-50">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Mensaje o Solicitud</label>
+                    <textarea rows="4" required placeholder="Escribe tu mensaje aquí..." class="w-full border border-rose-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-rose-600 bg-slate-50"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-slate-900 text-white py-3 rounded-xl font-semibold text-sm hover:bg-rose-600 transition shadow-md">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- PANEL DE ADMINISTRADOR (SIMULADO CON LOGIN) -->
+    <section id="admin" class="max-w-3xl mx-auto px-4 py-16" data-aos="fade-up">
+        <div class="bg-slate-900 text-white rounded-3xl p-8 shadow-xl">
+            <div class="text-center mb-6">
+                <span class="bg-rose-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Panel Privado</span>
+                <h3 class="text-2xl font-bold mt-2">Acceso de Administrador 🔐</h3>
+                <p class="text-slate-400 text-sm mt-1">Gestión interna del inventario y pedidos de Krisbell.</p>
+            </div>
+            
+            <div id="admin-login" class="space-y-4 max-w-md mx-auto">
+                <input type="password" id="admin-pass" placeholder="Contraseña de admin (ej: 1234)" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-rose-600">
+                <button onclick="verificarAdmin()" class="w-full bg-rose-600 text-white py-3 rounded-xl font-semibold text-sm hover:bg-rose-700 transition shadow-md">Ingresar al Panel</button>
+            </div>
+
+            <div id="admin-panel" class="hidden space-y-4 mt-4 bg-slate-800 p-6 rounded-2xl border border-slate-700">
+                <h4 class="font-bold text-rose-400 text-lg">📊 Panel de Control Activo</h4>
+                <p class="text-sm text-slate-300">Estado de la tienda: <span class="text-emerald-400 font-semibold">● En línea y funcionando</span></p>
+                <div class="grid grid-cols-2 gap-4 pt-2">
+                    <div class="bg-slate-900 p-4 rounded-xl border border-slate-700">
+                        <span class="text-xs text-slate-400 block">Productos Totales</span>
+                        <span class="text-2xl font-bold text-white">3 Activos</span>
+                    </div>
+                    <div class="bg-slate-900 p-4 rounded-xl border border-slate-700">
+                        <span class="text-xs text-slate-400 block">Pedidos Recibidos</span>
+                        <span class="text-2xl font-bold text-emerald-400">12 Hoy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-rose-100 mt-16 py-8 text-center text-slate-600 text-sm">
         <p>&copy; 2026 Krisbell. Todos los derechos reservados. Creado con dedicación para Jóvenes CreaTIvos.</p>
     </footer>
 
+    <!-- SCRIPTS DE ANIMACIÓN E INTELIGENCIA ARTIFICIAL -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializar animaciones de la página
+        AOS.init({ duration: 800, once: true });
+
+        // Lógica de la Asesora IA integrada
+        function enviarPreguntaIA() {
+            const input = document.getElementById('input-pregunta');
+            const historial = document.getElementById('chat-historial');
+            const texto = input.value.trim();
+
+            if (texto === "") return;
+
+            // Mostrar mensaje del usuario
+            historial.innerHTML += `<div class="bg-slate-100 p-3 rounded-xl text-sm text-slate-800 text-right"><strong>Tú:</strong> ${texto}</div>`;
+
+            // Generar respuesta inteligente basada en el catálogo de Krisbell
+            let respuesta = "¡Excelente elección! Para ese estilo, te recomiendo muchísimo probar nuestro <strong>Iluminador Glow Liquid</strong> o complementar con el <strong>Labial Matte Terciopelo</strong>.";
+            
+            const textoMinus = texto.toLowerCase();
+            if (textoMinus.includes("labial") || textoMinus.includes("labios")) {
+                respuesta = "💄 El <strong>Labial Matte Terciopelo</strong> ($38.000 COP) es ideal: tiene larga duración, alta pigmentación y no te reseca los labios.";
+            } else if (textoMinus.includes("brocha") || textoMinus.includes("ojos")) {
+                respuesta = "💎 El <strong>Set de Brochas Gold Pro</strong> ($65.000 COP) incluye 10 brochas con cerdas ultrasuaves para un difuminado perfecto.";
+            } else if (textoMinus.includes("brillo") || textoMinus.includes("piel") || textoMinus.includes("iluminador")) {
+                respuesta = "✨ El <strong>Iluminador Glow Liquid</strong> ($45.000 COP) aporta un brillo radiante y natural con textura ligera.";
+            }
+
+            // Mostrar respuesta de la IA simulada
+            setTimeout(() => {
+                historial.innerHTML += `<div class="bg-rose-50 p-3 rounded-xl text-sm text-slate-700 border border-rose-100"><strong>Asesora Krisbell 🤖:</strong> ${respuesta}</div>`;
+                historial.scrollTop = historial.scrollHeight;
+            }, 500);
+
+            input.value = "";
+        }
+
+        // Lógica del Login de Administrador
+        function verificarAdmin() {
+            const pass = document.getElementById('admin-pass').value;
+            if (pass === "1234" || pass === "admin") {
+                document.getElementById('admin-login').classList.add('hidden');
+                document.getElementById('admin-panel').classList.remove('hidden');
+            } else {
+                alert("Contraseña incorrecta. Prueba con '1234'");
+            }
+        }
+    </script>
 </body>
 </html>
